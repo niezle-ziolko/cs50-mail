@@ -1,0 +1,523 @@
+@font-face{
+    font-family: "Yahoo Sans";
+    font-display: block;
+    src: url('/static/mail/yahoo-sans-light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face{
+    font-family: "Yahoo Sans";
+    font-display: block;
+    src: url('/static/mail/yahoo-sans-semibold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face{
+    font-family: "Yahoo Sans";
+    font-display: block;
+    src: url('/static/mail/yahoo-sans-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face{
+    font-family: "Centra No2";
+    font-display: block;
+    src: url('/static/mail/centra-no2-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face{
+    font-family: "Yahoo Sans CR4";
+    font-display: block;
+    src: url('/static/mail/yahoo-sans-cr4-vf.woff2') format('woff2');
+    display: swap;
+}
+
+body {
+    font-family: 'Yahoo Sans CR4', Arial;
+    background-color: #f0f3f5;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    line-height: 84px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    display: flex;
+    height: 84px;
+    background-color: #fff;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+h2 {
+    font-family: 'Centra No2';
+    font-size: 21px;
+    line-height: 21px;
+    margin: 0;
+}
+
+h3 {
+    font-family: 'Centra No2';
+    margin-top: 0;
+}
+
+p {
+    font-weight: 300;
+    font-size: 19px;
+    color: #1d2228;
+}
+
+a {
+    color: #7d2eff;
+    text-decoration: none;
+}
+
+a:hover,
+.button-emoji:hover,
+.ql-snow a,
+.ql-snow.ql-toolbar button:hover,
+.ql-snow .ql-toolbar button:hover,
+.ql-snow.ql-toolbar button:focus,
+.ql-snow .ql-toolbar button:focus,
+.ql-snow.ql-toolbar button.ql-active,
+.ql-snow .ql-toolbar button.ql-active,
+.ql-snow.ql-toolbar .ql-picker-label:hover,
+.ql-snow .ql-toolbar .ql-picker-label:hover,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active,
+.ql-snow.ql-toolbar .ql-picker-item:hover,
+.ql-snow .ql-toolbar .ql-picker-item:hover,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected {
+    color: #6001d0 !important;
+    transition: all 0.3s;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-stroke,
+.ql-snow .ql-toolbar button:hover .ql-stroke,
+.ql-snow.ql-toolbar button:focus .ql-stroke,
+.ql-snow .ql-toolbar button:focus .ql-stroke,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke,
+.ql-snow.ql-toolbar button:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar button:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar button:focus .ql-stroke-miter,
+.ql-snow .ql-toolbar button:focus .ql-stroke-miter,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke-miter,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke-miter,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke-miter {
+    stroke: #6001d0 !important;
+    transition: all 0.3s;
+}
+
+.ql-snow.ql-toolbar button:hover .ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-fill,
+.ql-snow.ql-toolbar button:focus .ql-fill,
+.ql-snow .ql-toolbar button:focus .ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-fill,
+.ql-snow.ql-toolbar button:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar button:focus .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button:focus .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar button.ql-active .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar button.ql-active .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-label.ql-active .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item:hover .ql-stroke.ql-fill,
+.ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill,
+.ql-snow .ql-toolbar .ql-picker-item.ql-selected .ql-stroke.ql-fill {
+    fill: #6001d0 !important;
+    transition: all 0.3s;
+}
+
+textarea {
+    min-height: 250px;
+    resize: vertical;
+}
+
+input {
+    font-family: 'Yahoo Sans CR4',Arial;
+}
+
+input:disabled {
+    background-color: #f0f3f5;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    font-family: 'Yahoo Sans', Arial;
+    background-color: #7d2eff;
+    border: 1px solid transparent;
+}
+
+.button-primary {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: #7d2eff;
+    border: 1px solid transparent;
+}
+
+.button-dash {
+    width: 135px;
+    margin-top: 0;
+}
+
+.button-register {
+    padding: 12px 77px;
+    color: #7d2eff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 25px;
+    display: revert;
+    border: 1px solid #7d2eff;
+}
+
+.button-register:hover {
+    transition: all 0.3s;
+    border: 1px solid #6001d0;
+}
+
+.button-register:active,
+.button-register:focus {
+    transition: all 0.3s;
+    border: 1px solid #5015b0;
+}
+
+.button-social {
+    padding: 10px 0;
+    margin-top: 20px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #b0b9c1;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #232a31;
+    font-weight: 500;
+}
+
+.button-social:hover {
+    border: 1px solid #232a31;
+    color: #232a31;
+}
+
+.button-emoji {
+    color: #7d2eff;
+    background-color: transparent;
+    font-size: 25px;
+    padding: 0;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.button-emoji:active,
+.button-emoji:focus {
+    transition: all 0.3s;
+    color: #5015b0;
+}
+
+.button-logout {
+    line-height: 25px;
+    text-align: center;
+}
+
+.button-send {
+    font-family: 'Yahoo Sans', Arial;
+    width: 135px;
+    padding: 12px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 25px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #7d2eff;
+    border: 1px solid transparent;
+}
+
+.button-email-view {
+    width: 135px;
+    margin-top: 0;
+    margin-left: auto;
+}
+
+.button-email-archieve {
+    width: 135px;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.button-send:hover,
+.button-dash:hover,
+#replyButton:hover,
+.button-primary:hover,
+.button-email-view:hover,
+.button-email-archieve:hover {
+    transition: all 0.3s;
+    background-color: #6001d0;
+}
+
+.button-dash:active,
+.button-send:active,
+#replyButton:active,
+.button-primary:active,
+.button-email-view:active,
+.button-email-archieve:active,
+.button-send:focus,
+.button-dash:focus,
+.button-primary:focus,
+.button-email-view:focus,
+.button-email-archieve:focus {
+    transition: all 0.3s;
+    background-color: #5015b0;
+}
+
+.login-text {
+    font-family: 'Yahoo Sans';
+    padding: 75px 20px 50px 50px;
+    display: block;
+    width: 630px;
+}
+
+.login-label {
+    position: relative;
+    top: 20px;
+    color: #8f8f8f;
+    font-size: 1em;
+    font-weight: normal;
+    transition: all 0.2s;
+    cursor: text;
+}
+
+.login-label.active {
+    font-size: 13px;
+    top: 0px;
+    color: #000;
+}
+
+.container-login {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    display: flex;
+    margin-top: 10px;
+    padding: 30px 30px;
+    text-align: center;
+    border-radius: 16px;
+    align-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-top: 1px solid #f1f1f5;
+    box-shadow: 0 0 1px 0 rgba(29,34,40,.1),0 2px 4px 0 rgba(29,34,40,.08);
+}
+
+.container-register {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f3f5;
+}
+
+.container-view, #compose-view {
+    margin: 10px;
+    padding: 30px 30px;
+    background: white;
+    border-radius: 16px;
+    border-top: 1px solid #f1f1f5;
+    box-shadow: 0 0 1px 0 rgba(29, 34, 40, .1), 0 2px 4px 0 rgba(29, 34, 40, .08);
+}
+
+#emailBody {
+    padding: 15px;
+    min-height: 350px;
+    border-radius: 15px;
+    border: 1px solid #b9bdc5;
+}
+#replyButton {
+    width: 135px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-control {
+    border: 0;
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 1px solid #b9bdc5;
+}
+
+.form-control.active {
+    transition: all 0.3s;
+    border-bottom: 1px solid #7d2eff;
+}
+
+.error {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.email {
+    gap: 10px;
+    margin: 0;
+    display: flex;
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+    line-height: 30px;
+    padding-left: 25px;
+    border-radius: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid #f0f3f5;
+}
+
+.read {
+    background-color: #f0f3f5;
+}
+
+.unread {
+    background-color: white;
+}
+
+.archive {
+    margin-right: 10px;
+}
+
+.ql-editor {
+    height: 350px !important;
+    font-family: 'Yahoo Sans CR4', Arial;
+}
+
+.ql-toolbar.ql-snow {
+    align-items: end;
+    display: flex;
+    font-family: 'Yahoo Sans CR4', Arial;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.github-box {
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: fixed;
+}
+
+.github-box div,
+.github-box div a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.github-box div {
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: flex-end;
+    transform: rotate(-45deg);
+}
+
+.github-box:after {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    border-top: 200px solid transparent;
+    border-left: 200px solid transparent;
+    border-bottom: 200px solid #343535;
+}
+
+.github-box div a,
+.github-box div p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 -12.8px;
+    text-decoration: none;
+    font-family: monospace;
+    padding: 3px 19px 25px 19px;
+    -webkit-text-decoration: none;
+    transition: color .15s cubic-bezier(1,-.115,.975,.855);
+}
+
+.github-box div a:focus,
+.github-box div a:hover,
+.github-box div p:focus,
+.github-box div p:hover {
+    color: #a6a6a6 !important;
+}
+
+.github-icon {
+    width: 35px;
+    height: 35px;
+    fill: currentColor;
+}
