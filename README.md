@@ -7,7 +7,7 @@ This project is a single-page email client developed using Django and vanilla Ja
 The Django project contains the following key elements:
 
 ```
-mail/
+cs50-mail/
 ├── mail/                # Django app for all functionality
 │   ├── migrations/
 │   │   ├── __init__.py
@@ -39,8 +39,6 @@ mail/
 │   ├── tests.py
 │   ├── urls.py
 │   └── views.py             # API endpoints and page rendering
-├── media/
-│   └── uploads
 ├── project3/                # Main project configuration
 │   ├── __init__.py
 │   ├── asgi.py
