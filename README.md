@@ -1,79 +1,163 @@
 # CS50 Project 3 - Mail
 
-This project is a single-page email client developed for CS50's Web Programming with Python and JavaScript course. The application mimics basic email functionalities, allowing users to send, receive, and manage emails using a clean and interactive interface. The project is built using Django for the backend and JavaScript for the frontend.
+This project is a single-page email client developed using Django and vanilla JavaScript as part of the CS50 Web Programming with Python and JavaScript course. It replicates core email functionalities, including sending, receiving, viewing, archiving, and replying to emails in a dynamic, interactive interface.
 
-## Demo
+## 🗂️ Project Structure
 
-A short video walkthrough of the project specifications: [https://youtu.be/mtI8MI4b0pc](https://youtu.be/mtI8MI4b0pc)
+The Django project contains the following key elements:
 
-### Test Login Credentials
+```
+mail/
+├── mail/                # Django app for all functionality
+│   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── 0001_initial.py
+│   │   └── 0002_alter_email_id_alter_user_id.py
+│   ├── static/          # JavaScript and CSS for client-side interactivity
+│   │   └── mail/
+│   │       ├── centra-no2-bold.woff2
+│   │       ├── favicon.ico
+│   │       ├── logo.svg
+│   │       ├── script.js
+│   │       ├── styles.css
+│   │       ├── register.webp
+│   │       ├── yahoo-sans-bold.woff2
+│   │       ├── yahoo-sans-cr4-vf.woff2
+│   │       ├── yahoo-sans-light.woff2
+│   │       ├── yahoo-sans-semibold.woff2
+│   │       └── 
+│   ├── templates/       # HTML templates
+│   │   └── mail/
+│   │       ├── index.html
+│   │       ├── layout.html
+│   │       ├── login.html
+│   │       └── register.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py            # Email model
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py             # API endpoints and page rendering
+├── media/
+│   └── uploads
+├── project3/                # Main project configuration
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── .gitignore
+├── LICENSE
+├── manage.py
+├── README.md
+└── requirements.txt
+```
 
-|          Email Address           |  Password  |
-|----------------------------------|------------|
-|         john@example.com         |  password  |
+## ✅ Features Overview
 
-## Project Requirements
+This section summarizes the core features implemented in the application.
 
-### Core Features
+### 🔑 User Authentication
+  
+  - **Register/Login/Logout**: Users can create an account, log in, and securely log out.
+  - Logged-in users can access their personalized email data.
 
-1. **User Authentication**:
-   - Users can register for an account, log in, and log out.
-   - The application displays different content based on whether a user is signed in.
+### ✉️ Compose Email
 
-2. **Email Composition**:
-   - Users can compose new emails by entering recipients, subject, and body.
-   - Emails are sent and stored in the database without being sent to real email servers.
+  - Users can write new emails by specifying:
+    - Recipients
+    - Subject
+    - Message body
+  - Sent emails are saved in the database and accessible through the "Sent" mailbox.
+  - Emails are not delivered to real email servers (internal system only).
 
-3. **Mailbox Navigation**:
-   - Users can navigate between their Inbox, Sent, and Archived emails.
-   - Each mailbox displays a list of emails with relevant details such as sender, subject, and timestamp.
+### 📬 Mailboxes
 
-4. **View Email**:
-   - Users can click on an email to view its full content, including sender, recipients, subject, timestamp, and body.
-   - Emails are marked as read when viewed.
+  - Users can navigate between Inbox, Sent, and Archive.
+  - Each mailbox displays a list of relevant emails showing:
+    - Sender or recipient
+    - Subject
+    - Timestamp
 
-5. **Archive and Unarchive Emails**:
-   - Users can archive emails from their Inbox and unarchive them from the Archive mailbox.
-   - This functionality allows for better email management.
+### 🔍 View Email
 
-6. **Reply to Emails**:
-   - Users can reply to emails, with the reply form pre-filled with the original sender's address and a formatted subject line.
-   - The body of the reply includes a quoted section of the original email.
+  - Clicking on an email opens a detailed view with:
+    - Sender
+    - Recipients
+    - Subject
+    - Timestamp
+    - Body
+  - Emails are marked as read once opened.
 
-7. **Responsive Design**:
-   - The application is designed to be user-friendly and responsive, ensuring a smooth experience across different devices.
+### 📁 Archive / Unarchive Emails
 
----
+  - Emails can be archived or unarchived with one click:
+    - Archive emails from Inbox
+    - Unarchive from Archive view
 
-## Additional Notes
+### 🔁 Reply to Emails
 
-- **JavaScript and AJAX**: The application uses JavaScript to handle user interactions and AJAX requests to communicate with the backend API without reloading the page.
-- **Error Handling**: The application provides clear feedback for actions such as sending emails and archiving/unarchiving.
-- **Extensibility**: The design and code structure allow for future enhancements and additional features.
+  - Users can reply to received emails.
+  - The reply form auto-fills:
+    - Recipient
+    - Formatted subject (`Re:`prefix)
+    - Original message as quoted text
 
----
+### 📱 Responsive Design
 
-## Running the Application
+  - The interface is responsive and works smoothly across various screen sizes and devices.
 
-To start the application, follow these steps:
+### ⚙️ Technical Notes
 
-1. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
+  - **JavaScript + AJAX**: Frontend interactions use JavaScript and `fetch` to make asynchronous calls to Django's REST API, enabling seamless updates without page reloads.
+  - **Error Handling**: The UI handles cases such as missing recipients or server errors with user-friendly feedback.
+  - **Extensibility**: Modular code allows easy extension, such as support for threading or message search.
 
-2. Running migrations:
-   ```bash
-   python manage.py makemigrations
-   python manage.py migrate
-   
-2. Start the application
-   ```bash
-   python manage.py runserver
+## 🚀 Running the Application
 
+To run the app locally:
 
-## Build static assets
+# Install dependencies
 
-To build static assets, follow these steps:
+```bash
+pip install -r requirements.txt
+```
+
+# Database setup
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+
+# Start development server
+
+```bash
+python manage.py runserver
+```
+
+## 🧱 Static Assets
+
+To collect and build static assets:
 
 ```bash
 python manage.py collectstatic
+```
+
+## 🎥 Demo
+
+Video walkthrough of the project and specifications:
+👉 https://youtu.be/mtI8MI4b0pc
+
+### 🔐 Test Login Credentials
+
+|  Email Address   | Password |
+|------------------|----------|
+| john@example.com | password |
+
+## 📜 Certification
+This project was submitted as part of the CS50’s Web Programming with Python and JavaScript course offered by Harvard University.
+Upon successful completion, I was awarded a certificate, which is available here:
+
+🎓 [View Certificate](https://certificates.cs50.io/6f5116d0-882d-4fc1-9dc6-0c96c5d4c7b1.pdf)
